@@ -1,0 +1,145 @@
+.tenant-settings-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.settings-card {
+  background-color: #ffffff;
+  border: 1px solid #E8E8E3;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(28, 45, 36, 0.01);
+  box-sizing: border-box;
+}
+
+.settings-subheading {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #071810;
+  margin: 0 0 16px;
+}
+
+.settings-desc {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  color: #5d5f5d;
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5d5f5d;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-input,
+.form-select {
+  background-color: #ffffff;
+  border: 1px solid #c3c8c2;
+  border-radius: 4px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  color: #071810;
+  padding: 10px 16px;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #071810;
+}
+
+.settings-save-btn {
+  align-self: flex-start;
+  background-color: #1c2d24;
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 12px;
+}
+
+.settings-save-btn:hover {
+  opacity: 0.9;
+}
+
+.mapping-list {
+  border: 1px solid #E8E8E3;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.mapping-table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.mapping-th-row {
+  border-bottom: 1px solid #E8E8E3;
+  background-color: #FAFAFA;
+}
+
+.mapping-th {
+  padding: 12px 16px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #5d5f5d;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mapping-tbody {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  color: #071810;
+}
+
+.mapping-tr {
+  border-bottom: 1px solid #E8E8E3;
+}
+
+.mapping-tr:last-child {
+  border-bottom: none;
+}
+
+.mapping-td {
+  padding: 12px 16px;
+}
+
+@media (max-width: 1024px) {
+  .settings-split-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

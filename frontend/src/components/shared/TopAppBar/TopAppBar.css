@@ -1,0 +1,117 @@
+.topbar-header {
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 280px);
+  height: 64px;
+  border-bottom: 1px solid #E8E8E3;
+  z-index: 40;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.topbar-mobile-menu {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #5d5f5d;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.topbar-mobile-menu:hover {
+  background-color: #f0f3ff;
+  color: #071810;
+}
+
+.topbar-tenant-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar-tenant-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  color: #5d5f5d;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.topbar-select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #071810;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.topbar-select:hover {
+  background-color: #e2e3e0;
+}
+
+.topbar-select:focus {
+  outline: none;
+  background-color: #e2e3e0;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar-icon-btn {
+  background: transparent;
+  border: none;
+  color: #5d5f5d;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.topbar-icon-btn:hover {
+  background-color: #e2e8f8;
+  color: #071810;
+  transform: scale(1.02);
+}
+
+.topbar-badge-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ba1a1a;
+}
+
+@media (max-width: 768px) {
+  .topbar-header {
+    width: 100%;
+    padding: 0 16px;
+  }
+  
+  .topbar-mobile-menu {
+    display: flex;
+  }
+}

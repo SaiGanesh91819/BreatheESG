@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+:root {
+  --bg-cotton: #F9F9F6;
+}
+
+body {
+  background-color: var(--bg-cotton);
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Material symbols outlined global configuration */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Drop and drop zone interactive styles */
+.drop-zone.dragover {
+  border-color: #1c2d24;
+  background-color: #e7eefe;
+}
+
+/* Custom scrollbars for a premium non-AI look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c3c8c2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #737874;
+}

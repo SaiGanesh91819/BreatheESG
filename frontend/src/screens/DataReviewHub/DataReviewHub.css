@@ -1,0 +1,25 @@
+.datareview-hub-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.screen-header {
+  margin-bottom: 40px;
+}
+
+.screen-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #071810;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.screen-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  color: #5d5f5d;
+  margin: 8px 0 0;
+}

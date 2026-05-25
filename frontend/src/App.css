@@ -1,0 +1,33 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  background-color: #F9F9F6;
+}
+
+.main-viewport {
+  flex-grow: 1;
+  margin-left: 280px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.content-canvas {
+  flex-grow: 1;
+  padding: 96px 40px 48px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .main-viewport {
+    margin-left: 0;
+  }
+  
+  .content-canvas {
+    padding: 96px 16px 48px;
+  }
+}

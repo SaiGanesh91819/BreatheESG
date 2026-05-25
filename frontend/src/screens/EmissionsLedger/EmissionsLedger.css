@@ -1,0 +1,131 @@
+.emissions-ledger-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.metric-card {
+  background-color: #ffffff;
+  border: 1px solid #E8E8E3;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(28, 45, 36, 0.01);
+  box-sizing: border-box;
+}
+
+.metric-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  color: #5d5f5d;
+  font-weight: 500;
+}
+
+.metric-val {
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #071810;
+}
+
+.metric-unit {
+  font-size: 14px;
+  font-weight: 400;
+  color: #5d5f5d;
+}
+
+.ledger-subheading {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #071810;
+  margin: 0 0 20px;
+}
+
+.ledger-table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.ledger-th-row {
+  border-bottom: 1px solid #E8E8E3;
+  background-color: #FAFAFA;
+}
+
+.ledger-th {
+  padding: 16px 24px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5d5f5d;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ledger-th.text-right {
+  text-align: right;
+}
+
+.ledger-th.text-center {
+  text-align: center;
+}
+
+.ledger-tbody {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  color: #071810;
+}
+
+.ledger-tr {
+  border-bottom: 1px solid #E8E8E3;
+  transition: background-color 0.15s ease;
+}
+
+.ledger-tr:last-child {
+  border-bottom: none;
+}
+
+.ledger-tr:hover {
+  background-color: #F9F9F6;
+}
+
+.ledger-td {
+  padding: 16px 24px;
+}
+
+.ledger-td.text-right {
+  text-align: right;
+}
+
+.ledger-td.text-center {
+  text-align: center;
+}
+
+.lock-icon {
+  font-size: 18px;
+}
+
+.lock-icon.text-success {
+  color: #115C2B;
+}
+
+@media (max-width: 1024px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
