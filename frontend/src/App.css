@@ -11,6 +11,7 @@
   flex-direction: column;
   min-height: 100vh;
   box-sizing: border-box;
+  min-width: 0; /* Bulletproof flexbox fix for wide children elements */
 }
 
 .content-canvas {
@@ -20,6 +21,7 @@
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+  min-width: 0; /* Prevents container from stretching wider than viewport */
 }
 
 @media (max-width: 768px) {
@@ -31,3 +33,93 @@
     padding: 96px 16px 48px;
   }
 }
+
+/* Premium Loading Spinner for API Ingest Operations */
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(249, 249, 246, 0.8);
+  backdrop-filter: blur(2px);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+.loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #E8E8E3;
+  border-top: 3px solid #1c2d24;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Global Status Badge Styles */
+.status-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.status-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* Specific Badge States */
+.status-badge-pill.pending {
+  background-color: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+.status-badge-pill.pending .status-pill-dot {
+  background-color: #94a3b8;
+}
+
+.status-badge-pill.approved {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+.status-badge-pill.approved .status-pill-dot {
+  background-color: #10b981;
+}
+
+.status-badge-pill.suspicious {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+.status-badge-pill.suspicious .status-pill-dot {
+  background-color: #f59e0b;
+}
+
+.status-badge-pill.failed {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}
+.status-badge-pill.failed .status-pill-dot {
+  background-color: #ef4444;
+}
+
+.loading-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #071810;
+  margin: 0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+

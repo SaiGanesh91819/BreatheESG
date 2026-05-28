@@ -120,6 +120,7 @@
 
 .sidenav-user-info {
   overflow: hidden;
+  position: relative;
 }
 
 .sidenav-username {
@@ -141,8 +142,22 @@
   overflow: hidden;
 }
 
+.signout-tooltip {
+  font-size: 10px;
+  font-weight: bold;
+  color: #ba1a1a;
+  opacity: 0;
+  transition: opacity 0.2s;
+  display: block;
+}
+
+.sidenav-user-card:hover .signout-tooltip {
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .sidenav-container {
     display: none; /* Mobile navigation toggle will handle this */
   }
 }
+

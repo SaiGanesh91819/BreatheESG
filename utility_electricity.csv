@@ -1,0 +1,106 @@
+start_date,end_date,facility,meter_id,usage_kwh
+2026-04-12,2026-05-11,Hamburg Assembly Plant,Meter-10,8059.4
+2026-05-02,2026-05-31,Berlin Warehouse,Meter-11,14637.7
+2026-05-03,2026-06-01,München Plant,Meter-12,7703.3
+2026-04-15,2026-05-14,München Plant,Meter-13,13293.3
+2026-05-05,2026-06-03,Berlin Warehouse,Meter-14,4171.3
+2026-05-06,2026-06-04,Berlin Warehouse,Meter-10,14089.8
+2026-04-13,2026-05-12,London HQ,Meter-11,12304.5
+2026-05-08,2026-06-06,Hamburg Assembly Plant,Meter-12,3632.8
+2026-05-09,2026-06-07,Dublin Hub,Meter-13,6343.1
+2026-04-16,2026-05-15,Dublin Hub,Meter-14,10132.2
+2026-05-01,2026-05-30,Hamburg Assembly Plant,Meter-10,14820.6
+2026-05-02,2026-05-31,London HQ,Meter-11,9895.9
+2026-04-14,2026-05-13,Dublin Hub,Meter-12,13838.5
+2026-05-04,2026-06-02,Berlin Warehouse,Meter-13,6906.9
+2026-05-05,2026-06-03,Dublin Hub,Meter-14,11427.9
+2026-04-12,2026-05-11,Berlin Warehouse,Meter-10,5765.2
+2026-05-07,2026-06-05,London HQ,Meter-11,2363.3
+2026-05-08,2026-06-06,Hamburg Assembly Plant,Meter-12,11932.8
+2026-04-15,2026-05-14,Berlin Warehouse,Meter-13,4394.9
+2026-05-10,2026-06-08,München Plant,Meter-14,13489.6
+2026-05-01,2026-05-30,Hamburg Assembly Plant,Meter-10,7367.8
+2026-04-13,2026-05-12,London HQ,Meter-11,10758.7
+2026-05-03,2026-06-01,München Plant,Meter-12,12406.6
+2026-05-04,2026-06-02,London HQ,Meter-13,5901.2
+2026-04-16,2026-05-15,London HQ,Meter-14,14614.2
+2026-05-06,2026-06-04,Berlin Warehouse,Meter-10,7631.7
+2026-05-07,2026-06-05,London HQ,Meter-11,4443.5
+2026-04-14,2026-05-13,Dublin Hub,Meter-12,3270.3
+2026-05-09,2026-06-07,Dublin Hub,Meter-13,9160.2
+2026-05-10,2026-06-08,Dublin Hub,Meter-14,11232.6
+2026-04-12,2026-05-11,London HQ,Meter-10,8510.6
+2026-05-02,2026-05-31,London HQ,Meter-11,5850.1
+2026-05-03,2026-06-01,Berlin Warehouse,Meter-12,8925.7
+2026-04-15,2026-05-14,Berlin Warehouse,Meter-13,4510.2
+2026-05-05,2026-06-03,Berlin Warehouse,Meter-14,11044.9
+2026-05-06,2026-06-04,Berlin Warehouse,Meter-10,10165.3
+2026-04-13,2026-05-12,Hamburg Assembly Plant,Meter-11,3660.0
+2026-05-08,2026-06-06,Berlin Warehouse,Meter-12,2846.7
+2026-05-09,2026-06-07,Berlin Warehouse,Meter-13,11675.4
+2026-04-16,2026-05-15,London HQ,Meter-14,5969.3
+2026-05-01,2026-05-30,Berlin Warehouse,Meter-10,12012.3
+2026-05-02,2026-05-31,Hamburg Assembly Plant,Meter-11,11501.5
+2026-04-14,2026-05-13,London HQ,Meter-12,5350.7
+2026-05-04,2026-06-02,Hamburg Assembly Plant,Meter-13,2365.8
+2026-05-05,2026-06-03,London HQ,Meter-14,14536.5
+2026-04-12,2026-05-11,Hamburg Assembly Plant,Meter-10,14641.1
+2026-05-07,2026-06-05,Berlin Warehouse,Meter-11,2946.0
+2026-05-08,2026-06-06,Dublin Hub,Meter-12,3563.4
+2026-04-15,2026-05-14,Dublin Hub,Meter-13,3697.6
+2026-05-10,2026-06-08,London HQ,Meter-14,2843.1
+2026-05-01,2026-05-30,London HQ,Meter-10,6074.6
+2026-04-13,2026-05-12,Berlin Warehouse,Meter-11,12104.8
+2026-05-03,2026-06-01,Berlin Warehouse,Meter-12,2054.2
+2026-05-04,2026-06-02,Berlin Warehouse,Meter-13,9190.2
+2026-04-16,2026-05-15,München Plant,Meter-14,6445.6
+2026-05-06,2026-06-04,Dublin Hub,Meter-10,12133.2
+2026-05-07,2026-06-05,München Plant,Meter-11,4245.1
+2026-04-14,2026-05-13,Hamburg Assembly Plant,Meter-12,8347.8
+2026-05-09,2026-06-07,London HQ,Meter-13,5990.3
+2026-05-10,2026-06-08,Hamburg Assembly Plant,Meter-14,10466.2
+2026-04-12,2026-05-11,Hamburg Assembly Plant,Meter-10,2925.2
+2026-05-02,2026-05-31,London HQ,Meter-11,12708.4
+2026-05-03,2026-06-01,Hamburg Assembly Plant,Meter-12,10207.4
+2026-04-15,2026-05-14,Hamburg Assembly Plant,Meter-13,10195.1
+2026-05-05,2026-06-03,Berlin Warehouse,Meter-14,6031.1
+2026-05-06,2026-06-04,Dublin Hub,Meter-10,4634.8
+2026-04-13,2026-05-12,Berlin Warehouse,Meter-11,14772.2
+2026-05-08,2026-06-06,Dublin Hub,Meter-12,10412.5
+2026-05-09,2026-06-07,Berlin Warehouse,Meter-13,3063.6
+2026-04-16,2026-05-15,Hamburg Assembly Plant,Meter-14,2513.0
+2026-05-01,2026-05-30,Dublin Hub,Meter-10,14910.9
+2026-05-02,2026-05-31,Hamburg Assembly Plant,Meter-11,4802.5
+2026-04-14,2026-05-13,München Plant,Meter-12,5433.1
+2026-05-04,2026-06-02,Dublin Hub,Meter-13,14931.6
+2026-05-05,2026-06-03,London HQ,Meter-14,10795.2
+2026-04-12,2026-05-11,Dublin Hub,Meter-10,11387.1
+2026-05-07,2026-06-05,London HQ,Meter-11,11116.3
+2026-05-08,2026-06-06,München Plant,Meter-12,9867.4
+2026-04-15,2026-05-14,Berlin Warehouse,Meter-13,5944.9
+2026-05-10,2026-06-08,München Plant,Meter-14,14841.5
+2026-05-01,2026-05-30,Berlin Warehouse,Meter-10,5045.7
+2026-04-13,2026-05-12,Berlin Warehouse,Meter-11,7888.7
+2026-05-03,2026-06-01,Dublin Hub,Meter-12,5529.5
+2026-05-04,2026-06-02,München Plant,Meter-13,4542.8
+2026-04-16,2026-05-15,Hamburg Assembly Plant,Meter-14,5652.8
+2026-05-06,2026-06-04,Berlin Warehouse,Meter-10,11860.4
+2026-05-07,2026-06-05,München Plant,Meter-11,6540.0
+2026-04-14,2026-05-13,Hamburg Assembly Plant,Meter-12,5745.7
+2026-05-09,2026-06-07,London HQ,Meter-13,10243.6
+2026-05-10,2026-06-08,Hamburg Assembly Plant,Meter-14,2656.3
+2026-04-12,2026-05-11,Berlin Warehouse,Meter-10,12416.6
+2026-05-02,2026-05-31,Berlin Warehouse,Meter-11,10370.2
+2026-05-03,2026-06-01,Hamburg Assembly Plant,Meter-12,9913.1
+2026-04-15,2026-05-14,Dublin Hub,Meter-13,3654.1
+2026-05-05,2026-06-03,Dublin Hub,Meter-14,12640.6
+2026-05-06,2026-06-04,Hamburg Assembly Plant,Meter-10,9208.6
+2026-04-13,2026-05-12,München Plant,Meter-11,7875.6
+2026-05-08,2026-06-06,Berlin Warehouse,Meter-12,11651.3
+2026-05-09,2026-06-07,London HQ,Meter-13,5204.8
+2026-04-16,2026-05-15,Hamburg Assembly Plant,Meter-14,14203.1
+2026-05-01,2026-05-30,Berlin Warehouse,Meter-10,4042.3
+2026-05-02,2026-05-31,München Plant,Meter-11,11758.0
+2026-04-14,2026-05-13,München Plant,Meter-12,13099.9
+2026-05-04,2026-06-02,München Plant,Meter-13,12627.1
+2026-05-05,2026-06-03,London HQ,Meter-14,7840.2

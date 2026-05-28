@@ -121,6 +121,7 @@
   color: #5d5f5d;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  white-space: nowrap;
 }
 
 .th-source { width: 220px; }
@@ -164,6 +165,7 @@
 
 .grid-td {
   padding: 16px 24px;
+  white-space: nowrap;
 }
 
 .grid-td.text-right {
@@ -207,43 +209,6 @@
   color: #434844;
   font-size: 12px;
   font-weight: 600;
-}
-
-.status-badge-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 12px;
-  border-radius: 9999px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.status-badge-pill.approved {
-  background-color: #E5F2E9;
-  color: #115C2B;
-}
-
-.status-badge-pill.approved .status-pill-dot {
-  background-color: #115C2B;
-}
-
-.status-badge-pill.suspicious {
-  background-color: #FFF4E5;
-  color: #8A4A00;
-}
-
-.status-badge-pill.suspicious .status-pill-dot {
-  background-color: #8A4A00;
-}
-
-.status-badge-pill.failed {
-  background-color: #ffdad6;
-  color: #93000a;
-}
-
-.status-badge-pill.failed .status-pill-dot {
-  background-color: #93000a;
 }
 
 .status-pill-dot {

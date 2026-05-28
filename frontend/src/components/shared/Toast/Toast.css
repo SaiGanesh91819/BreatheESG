@@ -1,0 +1,123 @@
+.toast-container {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 380px;
+  width: 100%;
+  pointer-events: none;
+}
+
+.toast-item {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(7, 24, 16, 0.08);
+  border: 1px solid rgba(232, 232, 227, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+/* Animations */
+.animate-toast-slide {
+  animation: toastSlideIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Toast Message */
+.toast-message {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+/* Icons */
+.toast-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* Close Button */
+.toast-close-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.toast-close-btn:hover {
+  opacity: 1;
+  background-color: rgba(7, 24, 16, 0.05);
+}
+
+.toast-close-btn .material-symbols-outlined {
+  font-size: 16px;
+}
+
+/* Success Variant (Emerald Sage theme) */
+.toast-item.success {
+  background-color: rgba(235, 247, 240, 0.95);
+  border-color: rgba(167, 224, 190, 0.8);
+  color: #064e3b;
+}
+.toast-item.success .toast-icon {
+  color: #10b981;
+}
+
+/* Error Variant (Coral Rose theme) */
+.toast-item.error {
+  background-color: rgba(254, 242, 242, 0.95);
+  border-color: rgba(252, 165, 165, 0.8);
+  color: #7f1d1d;
+}
+.toast-item.error .toast-icon {
+  color: #ef4444;
+}
+
+/* Warning Variant (Amber Ochre theme) */
+.toast-item.warning {
+  background-color: rgba(255, 251, 235, 0.95);
+  border-color: rgba(252, 211, 77, 0.8);
+  color: #78350f;
+}
+.toast-item.warning .toast-icon {
+  color: #f59e0b;
+}
+
+/* Info Variant (Slate Cotton theme) */
+.toast-item.info {
+  background-color: rgba(244, 244, 240, 0.95);
+  border-color: rgba(195, 200, 194, 0.8);
+  color: #1c2d24;
+}
+.toast-item.info .toast-icon {
+  color: #5d5f5d;
+}

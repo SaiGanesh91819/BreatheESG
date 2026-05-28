@@ -1,22 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ReviewTable.css';
 
 export default function ReviewTable({ records, onRowClick }) {
   const [scopeFilter, setScopeFilter] = useState('All Scopes');
   const [statusFilter, setStatusFilter] = useState('All Statuses');
   const [searchTerm, setSearchTerm] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 10;
+
+  // Reset page when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [scopeFilter, statusFilter, searchTerm, records]);
+
+  const getProbableStatus = (rec) => {
+    const emissions = parseFloat(rec.calcEmissions || rec.calc_emissions);
+    if (emissions > 50.0 || emissions <= 0.0) return 'Suspicious';
+    return 'Approved';
+  };
 
   // Filter Logic
   const filteredRecords = records.filter((rec) => {
     const matchesScope = scopeFilter === 'All Scopes' || rec.scope === scopeFilter;
     const matchesStatus = statusFilter === 'All Statuses' || rec.status === statusFilter;
+    
+    const facilityStr = typeof rec.facility === 'object' && rec.facility 
+      ? rec.facility.name 
+      : (rec.facility || '');
+
     const matchesSearch =
       rec.source.toLowerCase().includes(searchTerm.toLowerCase()) ||
       rec.rawValue.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      rec.facility.toLowerCase().includes(searchTerm.toLowerCase());
+      facilityStr.toLowerCase().includes(searchTerm.toLowerCase());
 
     return matchesScope && matchesStatus && matchesSearch;
   });
+
+  const totalPages = Math.ceil(filteredRecords.length / pageSize);
+  const startIndex = (currentPage - 1) * pageSize;
+  const currentRecords = filteredRecords.slice(startIndex, startIndex + pageSize);
 
   return (
     <div className="review-table-container">
@@ -83,8 +105,8 @@ export default function ReviewTable({ records, onRowClick }) {
               </tr>
             </thead>
             <tbody className="grid-tbody">
-              {filteredRecords.length > 0 ? (
-                filteredRecords.map((rec) => (
+              {currentRecords.length > 0 ? (
+                currentRecords.map((rec) => (
                   <tr
                     key={rec.id}
                     onClick={() => onRowClick(rec)}
@@ -122,10 +144,17 @@ export default function ReviewTable({ records, onRowClick }) {
                       {rec.calcEmissions}
                     </td>
                     <td className="grid-td text-center">
-                      <span className={`status-badge-pill ${rec.status.toLowerCase()}`}>
-                        <span className="status-pill-dot"></span>
-                        {rec.status}
-                      </span>
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px' }}>
+                        <span className={`status-badge-pill ${rec.status.toLowerCase()}`}>
+                          <span className="status-pill-dot"></span>
+                          {rec.status}
+                        </span>
+                        {rec.status === 'Pending' && (
+                          <span style={{ fontSize: '10px', color: '#64748b', fontWeight: '500' }}>
+                            Probable: <span className={getProbableStatus(rec) === 'Suspicious' ? 'text-danger' : 'text-success'}>{getProbableStatus(rec)}</span>
+                          </span>
+                        )}
+                      </div>
                     </td>
                     <td className="grid-td text-center">
                       <button className="grid-actions-btn">
@@ -148,15 +177,23 @@ export default function ReviewTable({ records, onRowClick }) {
         {/* Grid Pagination Footer */}
         <div className="grid-footer">
           <span className="footer-stats">
-            Showing {filteredRecords.length} of {records.length} records
+            Showing {filteredRecords.length === 0 ? 0 : startIndex + 1} - {Math.min(startIndex + pageSize, filteredRecords.length)} of {filteredRecords.length} records
           </span>
           <div className="pagination-btns">
-            <button className="pagination-nav-btn" disabled>
+            <button 
+              className="pagination-nav-btn" 
+              disabled={currentPage === 1} 
+              onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+            >
               <span className="material-symbols-outlined font-sm">chevron_left</span>
             </button>
-            <button className="pagination-num-btn active">1</button>
-            <button className="pagination-num-btn">2</button>
-            <button className="pagination-nav-btn">
+            <button className="pagination-num-btn active">{currentPage}</button>
+            <span style={{color: '#5d5f5d', margin: 'auto 8px'}}>of {totalPages || 1}</span>
+            <button 
+              className="pagination-nav-btn" 
+              disabled={currentPage >= totalPages || totalPages === 0} 
+              onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+            >
               <span className="material-symbols-outlined font-sm">chevron_right</span>
             </button>
           </div>

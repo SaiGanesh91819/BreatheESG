@@ -1,6 +1,8 @@
 .ingestion-queue-container {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  width: 100%;
 }
 
 .screen-header {

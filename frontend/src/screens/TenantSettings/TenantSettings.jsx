@@ -1,16 +1,68 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useToast } from '../../components/shared/Toast/ToastContext';
 import './TenantSettings.css';
 
-export default function TenantSettings() {
+export default function TenantSettings({ activeTenant }) {
+  const { showToast } = useToast();
   const [tenantName, setTenantName] = useState('Global Retail Corp');
   const [selectedFacility, setSelectedFacility] = useState('UK Facility');
+  const [facilities, setFacilities] = useState([]);
+  
+  // Form for adding new custom plant mapping registries in real-time
+  const [newCode, setNewCode] = useState('');
+  const [newName, setNewName] = useState('');
 
-  const facilityRegistries = [
-    { code: ' Werk-MUC', facility: 'München-01 Plant', scope: 'Scope 1 (Stationary)' },
-    { code: 'Werk-BER', facility: 'Berlin-HQ Office', scope: 'Scope 1 (Fleet) & Scope 2' },
-    { code: 'Meter-UK-04', facility: 'National Grid UK Meter', scope: 'Scope 2 (Electricity)' },
-    { code: 'Concur-DE', facility: 'Corporate Travel Account', scope: 'Scope 3 (Business Travel)' },
-  ];
+  // Fetch resolved facility plant registries dynamically from Django
+  const fetchFacilities = async () => {
+    try {
+      const response = await fetch('http://127.0.0.1:8000/api/core/facilities/', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Tenant-Slug': activeTenant
+        }
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setFacilities(data);
+      }
+    } catch (e) {
+      console.error('Failed to load facility registers from API.', e);
+    }
+  };
+
+  useEffect(() => {
+    fetchFacilities();
+  }, [activeTenant]);
+
+  const handleAddFacility = async (e) => {
+    e.preventDefault();
+    if (!newCode || !newName) return;
+
+    try {
+      const response = await fetch('http://127.0.0.1:8000/api/core/facilities/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Tenant-Slug': activeTenant
+        },
+        body: JSON.stringify({ code: newCode, name: newName })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setFacilities((prev) => [data, ...prev]);
+        setNewCode('');
+        setNewName('');
+        showToast('Custom facility mapping successfully logged in Django SQL registry!', 'success');
+      } else {
+        showToast('Failed to log facility mapping to backend database.', 'error');
+      }
+    } catch (err) {
+      console.error('Error logging facility:', err);
+      showToast('Network error connecting to Django backend.', 'error');
+    }
+  };
 
   return (
     <div className="tenant-settings-container">
@@ -20,40 +72,44 @@ export default function TenantSettings() {
       </header>
 
       <div className="settings-split-grid">
-        {/* Left Side: General config */}
+        {/* Left Side: Create Custom Plant Mapping Codes */}
         <div className="settings-card">
-          <h3 className="settings-subheading">General Parameters</h3>
-          <form className="settings-form" onSubmit={(e) => e.preventDefault()}>
+          <h3 className="settings-subheading">Log Custom Facility Mapping</h3>
+          <p className="settings-desc">
+            Register new ERP code maps directly into your active tenant ledger context.
+          </p>
+          <form className="settings-form" onSubmit={handleAddFacility}>
             <div className="form-item">
-              <label className="form-label">Enterprise Name</label>
+              <label className="form-label">Incoming ERP/Meter Code</label>
               <input
                 type="text"
-                value={tenantName}
-                onChange={(e) => setTenantName(e.target.value)}
+                required
+                value={newCode}
+                onChange={(e) => setNewCode(e.target.value)}
                 className="form-input"
+                placeholder="e.g. Werk-HAM"
               />
             </div>
             <div className="form-item">
-              <label className="form-label">Active Hub Segment</label>
-              <select
-                value={selectedFacility}
-                onChange={(e) => setSelectedFacility(e.target.value)}
-                className="form-select"
-              >
-                <option>UK Facility</option>
-                <option>German Plant segment</option>
-                <option>US Headquarters</option>
-              </select>
+              <label className="form-label">Canonical Facility Name</label>
+              <input
+                type="text"
+                required
+                value={newName}
+                onChange={(e) => setNewName(e.target.value)}
+                className="form-input"
+                placeholder="e.g. Hamburg Assembly Plant"
+              />
             </div>
-            <button className="settings-save-btn">Save Changes</button>
+            <button type="submit" className="settings-save-btn">Log Facility Mapping</button>
           </form>
         </div>
 
-        {/* Right Side: Mapping registries (crucial for SAP code mapping) */}
+        {/* Right Side: Live Mapping registries from Database */}
         <div className="settings-card">
           <h3 className="settings-subheading">Plant Code Mappings</h3>
           <p className="settings-desc">
-            Resolves unlabelled ERP codes and portal meter IDs to canonical organizational scopes.
+            Resolves incoming ERP codes and portal meter IDs to canonical organizational locations.
           </p>
           <div className="mapping-list">
             <table className="mapping-table">
@@ -61,19 +117,23 @@ export default function TenantSettings() {
                 <tr className="mapping-th-row">
                   <th className="mapping-th">Incoming Code</th>
                   <th className="mapping-th">Resolved Facility</th>
-                  <th className="mapping-th">Assigned Scope</th>
                 </tr>
               </thead>
               <tbody className="mapping-tbody">
-                {facilityRegistries.map((reg, idx) => (
-                  <tr key={idx} className="mapping-tr">
-                    <td className="mapping-td font-mono font-bold">{reg.code}</td>
-                    <td className="mapping-td">{reg.facility}</td>
-                    <td className="mapping-td">
-                      <span className="scope-badge">{reg.scope}</span>
+                {facilities.length > 0 ? (
+                  facilities.map((reg, idx) => (
+                    <tr key={idx} className="mapping-tr">
+                      <td className="mapping-td font-mono font-bold">{reg.code}</td>
+                      <td className="mapping-td">{reg.name}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="2" className="empty-table-cell">
+                      No custom mapping rules logged for this tenant context.
                     </td>
                   </tr>
-                ))}
+                )}
               </tbody>
             </table>
           </div>

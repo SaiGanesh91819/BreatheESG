@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react';
+import { useToast } from '../../../../components/shared/Toast/ToastContext';
 import './ManualUpload.css';
 
 export default function ManualUpload({ onFileUpload }) {
+  const { showToast } = useToast();
   const [isDragOver, setIsDragOver] = useState(false);
   const fileInputRef = useRef(null);
 
@@ -52,7 +54,7 @@ export default function ManualUpload({ onFileUpload }) {
     if (['csv', 'xlsx', 'pdf'].includes(extension)) {
       onFileUpload(file);
     } else {
-      alert('Unsupported file format. Please upload a .csv, .xlsx, or .pdf file.');
+      showToast('Unsupported file format. Please upload a .csv, .xlsx, or .pdf file.', 'warning');
     }
   };
 

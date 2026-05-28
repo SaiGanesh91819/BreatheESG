@@ -1,0 +1,106 @@
+date,facility,fuel,volume,unit
+2026-05-01,Berlin Warehouse,Benzin,2572.7,Liters
+2026-05-02,Dublin Hub,Benzin,2855.8,Liters
+2026-05-03,Dublin Hub,Benzin,560.5,Liters
+2026-05-04,Dublin Hub,Benzin,581.2,Liters
+2026-05-05,Hamburg Assembly Plant,Benzin,2997.5,Liters
+2026-05-06,London HQ,Benzin,987.0,Liters
+2026-05-07,München Plant,Diesel,2622.6,Liters
+2026-05-08,München Plant,Diesel,2444.4,Liters
+2026-05-09,Dublin Hub,Diesel,707.9,Liters
+2026-05-10,Hamburg Assembly Plant,Diesel,1618.8,Liters
+2026-05-11,Berlin Warehouse,Diesel,1642.2,Liters
+2026-05-12,London HQ,Diesel,1598.7,Liters
+2026-05-13,London HQ,Benzin,985.2,Liters
+2026-05-14,London HQ,Benzin,2083.3,Liters
+2026-05-15,London HQ,Benzin,1715.4,Liters
+2026-05-16,München Plant,Benzin,706.1,Liters
+2026-05-17,München Plant,Diesel,1320.1,Liters
+2026-05-18,London HQ,Diesel,1392.1,Liters
+2026-05-19,München Plant,Benzin,1518.8,Liters
+2026-05-20,London HQ,Benzin,1511.1,Liters
+2026-05-21,Dublin Hub,Diesel,1530.1,Liters
+2026-05-22,Dublin Hub,Diesel,1834.3,Liters
+2026-05-23,München Plant,Benzin,1229.3,Liters
+2026-05-24,Berlin Warehouse,Benzin,1367.4,Liters
+2026-05-25,München Plant,Benzin,563.9,Liters
+2026-05-01,Hamburg Assembly Plant,Benzin,1686.9,Liters
+2026-05-02,London HQ,Diesel,674.9,Liters
+2026-05-03,München Plant,Benzin,1784.8,Liters
+2026-05-04,Berlin Warehouse,Diesel,1743.0,Liters
+2026-05-05,Dublin Hub,Benzin,2969.2,Liters
+2026-05-06,Berlin Warehouse,Benzin,2598.4,Liters
+2026-05-07,Hamburg Assembly Plant,Diesel,2609.4,Liters
+2026-05-08,Dublin Hub,Diesel,2511.6,Liters
+2026-05-09,Berlin Warehouse,Benzin,2251.2,Liters
+2026-05-10,London HQ,Diesel,2382.1,Liters
+2026-05-11,Berlin Warehouse,Diesel,2805.9,Liters
+2026-05-12,München Plant,Diesel,2413.4,Liters
+2026-05-13,München Plant,Diesel,2833.4,Liters
+2026-05-14,London HQ,Diesel,1080.7,Liters
+2026-05-15,London HQ,Benzin,1547.1,Liters
+2026-05-16,München Plant,Benzin,640.8,Liters
+2026-05-17,London HQ,Diesel,2197.5,Liters
+2026-05-18,Dublin Hub,Diesel,1939.9,Liters
+2026-05-19,London HQ,Diesel,2184.2,Liters
+2026-05-20,Hamburg Assembly Plant,Diesel,1143.5,Liters
+2026-05-21,Berlin Warehouse,Diesel,1554.6,Liters
+2026-05-22,London HQ,Benzin,2778.7,Liters
+2026-05-23,Hamburg Assembly Plant,Diesel,1599.0,Liters
+2026-05-24,London HQ,Benzin,941.1,Liters
+2026-05-25,Dublin Hub,Diesel,2498.6,Liters
+2026-05-01,München Plant,Diesel,929.0,Liters
+2026-05-02,Berlin Warehouse,Diesel,2062.4,Liters
+2026-05-03,Dublin Hub,Diesel,1707.0,Liters
+2026-05-04,Dublin Hub,Diesel,2249.3,Liters
+2026-05-05,London HQ,Diesel,1276.7,Liters
+2026-05-06,München Plant,Diesel,1452.7,Liters
+2026-05-07,Berlin Warehouse,Diesel,2023.4,Liters
+2026-05-08,Hamburg Assembly Plant,Benzin,1769.2,Liters
+2026-05-09,München Plant,Benzin,2659.0,Liters
+2026-05-10,Berlin Warehouse,Diesel,2096.4,Liters
+2026-05-11,Dublin Hub,Diesel,1259.2,Liters
+2026-05-12,London HQ,Benzin,866.0,Liters
+2026-05-13,Dublin Hub,Diesel,1737.8,Liters
+2026-05-14,München Plant,Diesel,2070.7,Liters
+2026-05-15,London HQ,Diesel,2405.2,Liters
+2026-05-16,München Plant,Diesel,1249.4,Liters
+2026-05-17,München Plant,Diesel,1762.1,Liters
+2026-05-18,Hamburg Assembly Plant,Diesel,2758.9,Liters
+2026-05-19,Berlin Warehouse,Diesel,2688.4,Liters
+2026-05-20,Berlin Warehouse,Diesel,1454.9,Liters
+2026-05-21,München Plant,Diesel,876.0,Liters
+2026-05-22,München Plant,Diesel,2093.9,Liters
+2026-05-23,München Plant,Diesel,2151.3,Liters
+2026-05-24,Berlin Warehouse,Benzin,2312.2,Liters
+2026-05-25,Dublin Hub,Diesel,1394.1,Liters
+2026-05-01,München Plant,Benzin,516.9,Liters
+2026-05-02,Hamburg Assembly Plant,Diesel,2713.5,Liters
+2026-05-03,Hamburg Assembly Plant,Benzin,2466.6,Liters
+2026-05-04,Dublin Hub,Benzin,2841.1,Liters
+2026-05-05,Hamburg Assembly Plant,Benzin,2952.4,Liters
+2026-05-06,Berlin Warehouse,Diesel,2210.9,Liters
+2026-05-07,Hamburg Assembly Plant,Diesel,2799.6,Liters
+2026-05-08,Berlin Warehouse,Benzin,1306.0,Liters
+2026-05-09,Hamburg Assembly Plant,Benzin,1748.6,Liters
+2026-05-10,München Plant,Diesel,1806.2,Liters
+2026-05-11,München Plant,Benzin,827.5,Liters
+2026-05-12,München Plant,Diesel,2362.6,Liters
+2026-05-13,Dublin Hub,Benzin,1784.7,Liters
+2026-05-14,London HQ,Diesel,2934.1,Liters
+2026-05-15,Dublin Hub,Benzin,1105.7,Liters
+2026-05-16,Dublin Hub,Benzin,2330.8,Liters
+2026-05-17,München Plant,Benzin,543.9,Liters
+2026-05-18,Dublin Hub,Diesel,2106.1,Liters
+2026-05-19,London HQ,Diesel,2265.8,Liters
+2026-05-20,Dublin Hub,Benzin,2831.5,Liters
+2026-05-21,Dublin Hub,Benzin,1318.8,Liters
+2026-05-22,Berlin Warehouse,Benzin,736.8,Liters
+2026-05-23,London HQ,Benzin,874.0,Liters
+2026-05-24,Dublin Hub,Diesel,2228.6,Liters
+2026-05-25,Hamburg Assembly Plant,Benzin,1769.0,Liters
+2026-05-01,London HQ,Benzin,2003.1,Liters
+2026-05-02,Hamburg Assembly Plant,Diesel,2884.0,Liters
+2026-05-03,London HQ,Diesel,1803.3,Liters
+2026-05-04,Dublin Hub,Benzin,1249.6,Liters
+2026-05-05,London HQ,Diesel,2547.2,Liters

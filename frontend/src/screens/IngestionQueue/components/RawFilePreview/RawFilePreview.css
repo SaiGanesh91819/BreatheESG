@@ -1,4 +1,8 @@
 .preview-section {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   margin-bottom: 48px;
   animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
 }
@@ -19,6 +23,8 @@
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 24px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .preview-title {
@@ -88,10 +94,18 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(28, 45, 36, 0.02);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .preview-table-wrapper {
   overflow-x: auto;
+  overflow-y: auto;
+  max-height: 480px; /* Contains large CSV files beautifully on screen */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .preview-table {
@@ -101,7 +115,6 @@
 }
 
 .preview-table-header-row {
-  border-b: 1px solid #E8E8E3;
   background-color: #FAFAFA;
 }
 
@@ -113,6 +126,11 @@
   color: #5d5f5d;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+  background-color: #FAFAFA;
+  z-index: 10;
+  border-bottom: 1px solid #E8E8E3;
 }
 
 .preview-tbody {

@@ -1,0 +1,151 @@
+date,category,origin,destination,details,metric_value,employee_id
+2026-05-08,Hotel,MUC,MUC,Standard Room,3,EMP-311
+2026-05-13,Hotel,CDG,CDG,Standard Room,4,EMP-360
+2026-05-01,Flight,LHR,DXB,Economy,1,EMP-884
+2026-05-23,Hotel,DXB,DXB,Standard Room,1,EMP-773
+2026-05-18,Hotel,DXB,DXB,Standard Room,2,EMP-813
+2026-05-18,Flight,LHR,MUC,Economy,1,EMP-426
+2026-05-05,Flight,MUC,SIN,Premium,1,EMP-689
+2026-05-06,Hotel,CDG,CDG,Standard Room,5,EMP-255
+2026-05-09,Ground,City Center,Airport,Train,46,EMP-357
+2026-05-28,Ground,City Center,Airport,Train,64,EMP-114
+2026-05-25,Flight,LAX,LHR,First,1,EMP-399
+2026-05-12,Flight,MUC,LAX,Business,1,EMP-889
+2026-05-25,Hotel,LHR,LHR,Standard Room,5,EMP-524
+2026-05-26,Ground,City Center,Airport,Taxi,66,EMP-988
+2026-05-12,Ground,City Center,Airport,Train,109,EMP-964
+2026-05-07,Flight,LAX,LHR,Business,1,EMP-443
+2026-05-19,Hotel,MUC,MUC,Standard Room,3,EMP-714
+2026-05-17,Hotel,MUC,MUC,Standard Room,2,EMP-210
+2026-05-06,Flight,CDG,DXB,First,1,EMP-570
+2026-05-30,Flight,CDG,LAX,Economy,1,EMP-441
+2026-05-11,Flight,DXB,LAX,Economy,1,EMP-890
+2026-05-17,Hotel,MUC,MUC,Standard Room,3,EMP-909
+2026-05-18,Hotel,DXB,DXB,Standard Room,2,EMP-155
+2026-05-26,Flight,LAX,SIN,Business,1,EMP-189
+2026-05-13,Ground,City Center,Airport,Taxi,74,EMP-497
+2026-05-13,Ground,City Center,Airport,Train,88,EMP-680
+2026-05-19,Flight,LHR,JFK,Economy,1,EMP-478
+2026-05-01,Ground,City Center,Airport,Taxi,79,EMP-508
+2026-05-29,Flight,JFK,CDG,Economy,1,EMP-963
+2026-05-19,Ground,City Center,Airport,Train,94,EMP-287
+2026-05-23,Flight,MUC,CDG,Business,1,EMP-635
+2026-05-29,Ground,City Center,Airport,Rental Car,27,EMP-764
+2026-05-28,Ground,City Center,Airport,Rental Car,39,EMP-496
+2026-05-09,Hotel,JFK,JFK,Standard Room,4,EMP-983
+2026-05-26,Hotel,LHR,LHR,Standard Room,4,EMP-869
+2026-05-20,Ground,City Center,Airport,Rental Car,36,EMP-367
+2026-05-16,Hotel,CDG,CDG,Standard Room,3,EMP-794
+2026-05-03,Flight,JFK,LAX,Business,1,EMP-677
+2026-05-31,Flight,LHR,LAX,Business,1,EMP-636
+2026-05-28,Hotel,CDG,CDG,Standard Room,3,EMP-951
+2026-05-19,Flight,CDG,JFK,First,1,EMP-803
+2026-05-21,Flight,CDG,DXB,Economy,1,EMP-862
+2026-05-02,Ground,City Center,Airport,Rental Car,42,EMP-901
+2026-05-18,Ground,City Center,Airport,Taxi,61,EMP-193
+2026-05-14,Ground,City Center,Airport,Rental Car,24,EMP-178
+2026-05-21,Hotel,DXB,DXB,Standard Room,5,EMP-628
+2026-05-07,Hotel,CDG,CDG,Standard Room,4,EMP-699
+2026-05-13,Hotel,SIN,SIN,Standard Room,2,EMP-918
+2026-05-14,Flight,LAX,SIN,Economy,1,EMP-116
+2026-05-05,Hotel,CDG,CDG,Standard Room,4,EMP-334
+2026-05-25,Hotel,JFK,JFK,Standard Room,2,EMP-650
+2026-05-15,Flight,LHR,CDG,Economy,1,EMP-951
+2026-05-29,Hotel,JFK,JFK,Standard Room,3,EMP-215
+2026-05-05,Flight,MUC,LHR,First,1,EMP-637
+2026-05-05,Hotel,MUC,MUC,Standard Room,4,EMP-179
+2026-05-15,Ground,City Center,Airport,Rental Car,103,EMP-461
+2026-05-16,Hotel,CDG,CDG,Standard Room,3,EMP-290
+2026-05-20,Flight,LHR,DXB,Business,1,EMP-253
+2026-05-18,Ground,City Center,Airport,Taxi,75,EMP-585
+2026-05-25,Ground,City Center,Airport,Taxi,120,EMP-803
+2026-05-21,Hotel,CDG,CDG,Standard Room,5,EMP-210
+2026-05-31,Flight,LHR,DXB,Economy,1,EMP-984
+2026-05-24,Hotel,DXB,DXB,Standard Room,4,EMP-705
+2026-05-30,Hotel,SIN,SIN,Standard Room,1,EMP-495
+2026-05-13,Hotel,JFK,JFK,Standard Room,4,EMP-172
+2026-05-31,Flight,SIN,DXB,Business,1,EMP-244
+2026-05-03,Ground,City Center,Airport,Train,59,EMP-579
+2026-05-27,Hotel,LHR,LHR,Standard Room,1,EMP-925
+2026-05-25,Hotel,SIN,SIN,Standard Room,2,EMP-453
+2026-05-18,Hotel,LHR,LHR,Standard Room,2,EMP-204
+2026-05-18,Flight,DXB,LHR,First,1,EMP-373
+2026-05-21,Flight,SIN,LAX,Premium,1,EMP-346
+2026-05-16,Ground,City Center,Airport,Train,51,EMP-250
+2026-05-29,Ground,City Center,Airport,Train,16,EMP-438
+2026-05-14,Hotel,LHR,LHR,Standard Room,3,EMP-137
+2026-05-10,Ground,City Center,Airport,Rental Car,114,EMP-648
+2026-05-11,Hotel,LAX,LAX,Standard Room,5,EMP-376
+2026-05-28,Ground,City Center,Airport,Rental Car,17,EMP-882
+2026-05-21,Ground,City Center,Airport,Train,71,EMP-317
+2026-05-28,Flight,LAX,SIN,Economy,1,EMP-443
+2026-05-23,Hotel,JFK,JFK,Standard Room,5,EMP-345
+2026-05-21,Ground,City Center,Airport,Rental Car,94,EMP-884
+2026-05-13,Flight,DXB,SIN,Economy,1,EMP-245
+2026-05-15,Ground,City Center,Airport,Taxi,53,EMP-231
+2026-05-08,Hotel,SIN,SIN,Standard Room,5,EMP-167
+2026-05-24,Ground,City Center,Airport,Taxi,117,EMP-107
+2026-05-24,Ground,City Center,Airport,Train,89,EMP-676
+2026-05-20,Hotel,JFK,JFK,Standard Room,4,EMP-926
+2026-05-18,Flight,JFK,LAX,Business,1,EMP-950
+2026-05-19,Ground,City Center,Airport,Taxi,101,EMP-770
+2026-05-11,Ground,City Center,Airport,Train,114,EMP-577
+2026-05-30,Ground,City Center,Airport,Train,101,EMP-805
+2026-05-18,Hotel,DXB,DXB,Standard Room,4,EMP-126
+2026-05-25,Flight,DXB,LAX,Business,1,EMP-473
+2026-05-01,Flight,SIN,LAX,Business,1,EMP-544
+2026-05-04,Ground,City Center,Airport,Train,56,EMP-746
+2026-05-06,Flight,MUC,LAX,First,1,EMP-910
+2026-05-07,Hotel,DXB,DXB,Standard Room,4,EMP-348
+2026-05-15,Hotel,SIN,SIN,Standard Room,4,EMP-411
+2026-05-20,Hotel,MUC,MUC,Standard Room,1,EMP-839
+2026-05-21,Ground,City Center,Airport,Rental Car,46,EMP-840
+2026-05-18,Flight,SIN,LAX,First,1,EMP-933
+2026-05-18,Flight,CDG,JFK,Premium,1,EMP-197
+2026-05-27,Hotel,CDG,CDG,Standard Room,2,EMP-359
+2026-05-04,Hotel,MUC,MUC,Standard Room,2,EMP-385
+2026-05-22,Ground,City Center,Airport,Train,107,EMP-358
+2026-05-27,Ground,City Center,Airport,Rental Car,17,EMP-569
+2026-05-01,Hotel,JFK,JFK,Standard Room,2,EMP-950
+2026-05-03,Ground,City Center,Airport,Train,94,EMP-632
+2026-05-26,Flight,LAX,SIN,Business,1,EMP-993
+2026-05-30,Flight,CDG,DXB,First,1,EMP-942
+2026-05-05,Hotel,DXB,DXB,Standard Room,5,EMP-918
+2026-05-11,Ground,City Center,Airport,Rental Car,65,EMP-221
+2026-05-22,Ground,City Center,Airport,Train,18,EMP-164
+2026-05-23,Ground,City Center,Airport,Rental Car,111,EMP-945
+2026-05-12,Ground,City Center,Airport,Rental Car,110,EMP-236
+2026-05-26,Ground,City Center,Airport,Rental Car,42,EMP-311
+2026-05-28,Hotel,DXB,DXB,Standard Room,2,EMP-684
+2026-05-16,Ground,City Center,Airport,Train,78,EMP-119
+2026-05-14,Flight,LAX,JFK,Business,1,EMP-905
+2026-05-01,Flight,SIN,MUC,First,1,EMP-625
+2026-05-30,Hotel,LAX,LAX,Standard Room,4,EMP-844
+2026-05-31,Flight,CDG,MUC,First,1,EMP-863
+2026-05-18,Ground,City Center,Airport,Rental Car,21,EMP-717
+2026-05-05,Hotel,SIN,SIN,Standard Room,5,EMP-642
+2026-05-15,Flight,JFK,SIN,Economy,1,EMP-841
+2026-05-30,Flight,JFK,LAX,First,1,EMP-401
+2026-05-11,Hotel,LAX,LAX,Standard Room,5,EMP-585
+2026-05-29,Ground,City Center,Airport,Train,43,EMP-836
+2026-05-16,Flight,CDG,LHR,Economy,1,EMP-384
+2026-05-03,Ground,City Center,Airport,Train,108,EMP-579
+2026-05-27,Hotel,LAX,LAX,Standard Room,5,EMP-523
+2026-05-06,Hotel,JFK,JFK,Standard Room,2,EMP-719
+2026-05-07,Hotel,LAX,LAX,Standard Room,4,EMP-387
+2026-05-19,Flight,CDG,LAX,Premium,1,EMP-864
+2026-05-02,Ground,City Center,Airport,Rental Car,89,EMP-130
+2026-05-23,Flight,MUC,LAX,Economy,1,EMP-388
+2026-05-06,Ground,City Center,Airport,Rental Car,115,EMP-362
+2026-05-30,Ground,City Center,Airport,Train,17,EMP-593
+2026-05-24,Hotel,DXB,DXB,Standard Room,1,EMP-154
+2026-05-08,Flight,LHR,MUC,First,1,EMP-213
+2026-05-10,Hotel,DXB,DXB,Standard Room,2,EMP-620
+2026-05-17,Ground,City Center,Airport,Rental Car,103,EMP-997
+2026-05-28,Flight,CDG,JFK,Economy,1,EMP-452
+2026-05-28,Hotel,DXB,DXB,Standard Room,1,EMP-692
+2026-05-24,Hotel,DXB,DXB,Standard Room,1,EMP-148
+2026-05-04,Ground,City Center,Airport,Rental Car,16,EMP-898
+2026-05-02,Ground,City Center,Airport,Rental Car,94,EMP-992
+2026-05-30,Hotel,LAX,LAX,Standard Room,4,EMP-527
+2026-05-29,Ground,City Center,Airport,Rental Car,41,EMP-165

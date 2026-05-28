@@ -1,8 +1,26 @@
 import React from 'react';
+import { useToast } from '../../../../components/shared/Toast/ToastContext';
 import './RecordInspector.css';
 
-export default function RecordInspector({ record, onClose, onApprove, onFlag }) {
+export default function RecordInspector({ record, onClose, onApprove, onFlag, onEdit }) {
+  const { showToast } = useToast();
+
   if (!record) return null;
+
+  const getProbableStatus = () => {
+    const emissions = parseFloat(record.calcEmissions || record.calc_emissions);
+    if (emissions > 50.0 || emissions <= 0.0) return 'Suspicious';
+    return 'Approved';
+  };
+
+  const handleEditClick = () => {
+    const newVal = window.prompt("Force edit raw field (Warning: This action will be logged in the immutable audit trail):", record.rawValue);
+    if (newVal && newVal !== record.rawValue) {
+      if (onEdit) {
+        onEdit(record.id, newVal);
+      }
+    }
+  };
 
   return (
     <>
@@ -13,11 +31,24 @@ export default function RecordInspector({ record, onClose, onApprove, onFlag }) 
       <div className="inspector-drawer active animate-slide-in">
         {/* Drawer Header */}
         <div className="drawer-header">
-          <div className="drawer-header-info">
-            <h3 className="drawer-title">Record Inspector</h3>
-            <p className="drawer-subtitle">
-              {record.scope} - {record.scope === 'Scope 1' ? 'Direct' : record.scope === 'Scope 2' ? 'Indirect' : 'Value Chain'} Emissions
-            </p>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+            <div>
+              <h3 className="drawer-title">Record Inspector</h3>
+              <p className="drawer-subtitle">
+                {record.scope} - {record.scope === 'Scope 1' ? 'Direct' : record.scope === 'Scope 2' ? 'Indirect' : 'Value Chain'} Emissions
+              </p>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px', marginTop: '4px' }}>
+              <span className={`status-badge-pill ${record.status.toLowerCase()}`}>
+                <span className="status-pill-dot"></span>
+                {record.status}
+              </span>
+              {record.status === 'Pending' && (
+                <span style={{ fontSize: '10px', color: '#64748b', fontWeight: '500' }}>
+                  Probable: <span className={getProbableStatus() === 'Suspicious' ? 'text-danger' : 'text-success'}>{getProbableStatus()}</span>
+                </span>
+              )}
+            </div>
           </div>
           <button className="drawer-close-btn" onClick={onClose} aria-label="Close Inspector">
             <span className="material-symbols-outlined">close</span>
@@ -36,7 +67,11 @@ export default function RecordInspector({ record, onClose, onApprove, onFlag }) 
               </div>
               <div className="detail-item">
                 <span className="detail-label">Facility/Plant</span>
-                <span className="detail-val">{record.facility}</span>
+                <span className="detail-val">
+                  {typeof record.facility === 'object' && record.facility 
+                    ? record.facility.name 
+                    : (record.facility || 'Unassigned')}
+                </span>
               </div>
               <div className="detail-item">
                 <span className="detail-label">Ingest Date</span>
@@ -114,16 +149,23 @@ export default function RecordInspector({ record, onClose, onApprove, onFlag }) 
             <div className="timeline-trail">
               <div className="trail-line"></div>
               <div className="trail-nodes">
-                {record.auditTrail && record.auditTrail.map((audit, idx) => (
+                {record.auditTrail && record.auditTrail.map((audit, idx) => {
+                  const dateStr = new Date(audit.timestamp).toLocaleString();
+                  return (
                   <div key={idx} className="trail-node">
                     <div className={`node-dot ${idx === record.auditTrail.length - 1 ? 'bg-primary' : 'bg-dim'}`}></div>
                     <div className="node-info">
-                      <span className="node-time font-mono">{audit.time}</span>
-                      <span className="node-val font-medium">{audit.action}</span>
-                      <span className="node-user">by {audit.user}</span>
+                      <span className="node-time font-mono">{dateStr}</span>
+                      <span className="node-val font-medium">{audit.action_taken}</span>
+                      <span className="node-user">by {audit.user_id}</span>
+                      {audit.delta && (
+                        <pre className="delta-json mt-2 text-xs text-gray-500 bg-gray-50 p-2 rounded">
+                          {JSON.stringify(audit.delta, null, 2)}
+                        </pre>
+                      )}
                     </div>
                   </div>
-                ))}
+                )})}
               </div>
             </div>
           </div>
@@ -143,7 +185,7 @@ export default function RecordInspector({ record, onClose, onApprove, onFlag }) 
                 Flag as Anomaly
               </button>
             )}
-            <button className="btn-edit-fields">
+            <button className="btn-edit-fields" onClick={handleEditClick}>
               Edit Raw Fields
             </button>
           </div>

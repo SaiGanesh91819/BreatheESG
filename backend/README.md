@@ -1,13 +1,34 @@
-# Breathe ESG Ingestion Pipeline - Django Backend
+# Breathe ESG Ingestion Pipeline & Review Dashboard - Backend
 
-This directory will contain the Django REST Framework backend as planned in Phase 2.
+This is the enterprise-grade split-settings Django REST Framework backend for the Breathe ESG platform.
 
-## Planned Key Components
+## Features
 
-1. **Django REST API**: Token authentication, record creation endpoints, multi-tenancy filters.
-2. **Normalization Engine**: temiz, conversions, Scope mapping functions.
-3. **Audit Trail Logger**: Django signals/middleware logging all manual updates, flags, and auditor locks.
+- **Stateless REST APIs**: Built using DRF, designed to be fully decoupled from the React client.
+- **Service Layer Architecture**: Complex calculation, mapping, and proration parsers reside strictly in `apps/core/services/` for high testability and clean responsibility separation.
+- **Strict Ingestion Engines**: Dedicated parsers for SAP German column maps, calendar-split utility billing intervals, and geodetic Haversine flight distance calculations.
+- **Multi-Tenant Isolation**: Handled dynamically using `TenantMiddleware` matching headers.
+- ** ESG Auditing Trails**: Automatic database hooks logging transaction histories for reviewer locking and anomaly flagging.
 
-## Setup Instructions
+## Getting Started
 
-*(To be executed during Phase 2 after React Frontend verification)*
+1. Set up a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements/development.txt
+   ```
+
+3. Run migrations and initialize database:
+   ```bash
+   python manage.py migrate
+   ```
+
+4. Start development server:
+   ```bash
+   python manage.py runserver
+   ```
