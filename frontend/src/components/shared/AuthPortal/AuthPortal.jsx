@@ -6,6 +6,9 @@ const AUTH_API_URL = import.meta.env.VITE_API_URL
   : 'http://127.0.0.1:8000/api/auth';
 
 export default function AuthPortal({ onLoginSuccess }) {
+  console.log("VITE_API_URL is:", import.meta.env.VITE_API_URL);
+  console.log("AUTH_API_URL is:", AUTH_API_URL);
+  
   const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
