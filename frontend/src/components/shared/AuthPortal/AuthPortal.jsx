@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './AuthPortal.css';
 
-const AUTH_API_URL = 'http://127.0.0.1:8000/api/auth';
+const AUTH_API_URL = import.meta.env.VITE_API_URL 
+  ? import.meta.env.VITE_API_URL.replace('/api/core', '/api/auth') 
+  : 'http://127.0.0.1:8000/api/auth';
 
 export default function AuthPortal({ onLoginSuccess }) {
   const [isLogin, setIsLogin] = useState(true);

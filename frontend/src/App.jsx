@@ -10,6 +10,7 @@ import { useToast } from './components/shared/Toast/ToastContext';
 import './App.css';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api/core';
+const AUTH_API_URL = API_BASE_URL.replace('/api/core', '/api/auth');
 
 const TENANTS = [
   { id: 'uk', name: 'Global Retail Corp - UK Facility' },
@@ -78,7 +79,7 @@ export default function App() {
 
   const handleLogout = async () => {
     try {
-      await fetch('http://127.0.0.1:8000/api/auth/logout/', {
+      await fetch(`${AUTH_API_URL}/logout/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
