@@ -9,7 +9,7 @@ import TenantSettings from './screens/TenantSettings/TenantSettings';
 import { useToast } from './components/shared/Toast/ToastContext';
 import './App.css';
 
-const API_BASE_URL = 'http://127.0.0.1:8000/api/core';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api/core';
 
 const TENANTS = [
   { id: 'uk', name: 'Global Retail Corp - UK Facility' },
